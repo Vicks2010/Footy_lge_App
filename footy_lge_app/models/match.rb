@@ -8,10 +8,10 @@ class Match
     @id = options['id'].to_i
     @league_id = options['league_id'].to_i
   end
-def save()
-  sql = "INSERT INTO matches
-  (
-    league_id
+  def save()
+    sql = "INSERT INTO matches
+    (
+      league_id
     )
     VALUES(
       $1
@@ -20,6 +20,6 @@ def save()
     values = [league_id]
     match = SqlRunner.run(sql, values).first
     @id = match['id'].to_i
-end
+  end
 
 end

@@ -24,7 +24,7 @@ CREATE TABLE team_matches(
   id SERIAL4 PRIMARY KEY,
   match_id INT4 REFERENCES matches(id),
   team1_id INT4 REFERENCES teams(id),
-  team2_id INT4 REFERENCES teams(id)
-  team1_stats_goals INT4
+  team2_id INT4 REFERENCES teams(id),
+  team1_stats_goals INT4,
   team2_stats_goals INT4
 );
